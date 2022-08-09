@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="232d0f7d-38ae-4608-a14a-afe8b720767e" name="Changes" comment="first commit">
+    <list default="true" id="232d0f7d-38ae-4608-a14a-afe8b720767e" name="Changes" comment="composingSuspendingFuncs">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dispatchersAndThreads.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/cancellationandtimeouts.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/cancellationandtimeouts.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/composingSuspendingFuncs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/composingSuspendingFuncs.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -43,7 +47,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Kotlin.ComposingSuspendingFuncsKt">
+  <component name="RunManager" selected="Kotlin.DispatchersAndThreadsKt">
     <configuration name="CancellationandtimeoutsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CancellationandtimeoutsKt" />
       <module name="consoleApp" />
@@ -55,6 +59,13 @@
     </configuration>
     <configuration name="ComposingSuspendingFuncsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="composingSuspending.ComposingSuspendingFuncsKt" />
+      <module name="consoleApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DispatchersAndThreadsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dispatchersAndThreads.DispatchersAndThreadsKt" />
       <module name="consoleApp" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -72,10 +83,12 @@
     <list>
       <item itemvalue="Kotlin.MainKt" />
       <item itemvalue="Kotlin.ComposingSuspendingFuncsKt" />
+      <item itemvalue="Kotlin.DispatchersAndThreadsKt" />
       <item itemvalue="Kotlin.CancellationandtimeoutsKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.DispatchersAndThreadsKt" />
         <item itemvalue="Kotlin.ComposingSuspendingFuncsKt" />
         <item itemvalue="Kotlin.CancellationandtimeoutsKt" />
       </list>
@@ -97,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660075176178</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="composingSuspendingFuncs">
+      <created>1660076989522</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660076989522</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +133,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="composingSuspendingFuncs" />
+    <option name="LAST_COMMIT_MESSAGE" value="composingSuspendingFuncs" />
   </component>
 </project>
