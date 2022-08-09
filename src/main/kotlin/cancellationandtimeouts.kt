@@ -1,5 +1,5 @@
+package blocking;
 import kotlinx.coroutines.*
-
 /*fun main() = runBlocking{
     val job = launch{
         repeat(1000){

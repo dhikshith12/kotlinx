@@ -1,3 +1,4 @@
+package channels
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.*
 
@@ -43,5 +44,37 @@ fun log(message: Any?) {
         and it will grow infinitely. The send() call will never be suspended. If there's no more memory, you'll get an OutOfMemoryException.
         The difference with a queue appears when a consumer tries to receive from an empty channel and gets suspended until some new elements are sent.
 
-   
+            val unlimitedChannel = Channel<T>(UNLIMITED)
+
+   Buffered channel:
+
+    The size of a buffered channel is constrained by the specified number.
+    Producers can send elements to this channel until the size limit is reached.
+    All the elements are internally stored. When the channel is full, the next `send`
+    call on it suspends until more free space appears.
+
+           val bufferedChannel = Channel<T>(size)
+
+    Rendezvous channel:
+
+    The "Rendezvous" channel is a channel without a buffer.
+    It's the same as creating a buffered channel with a zero size.
+    One of the functions (send() or receive()) always gets suspended until the other is called.
+    If the send() function is called and there's no suspended receive call ready to process the element,
+    send() suspends. Similarly, if the receive function is called and the channel is empty or, in other words,
+    there's no suspended send() call ready to send the element, the receive() call suspends.
+
+    The "rendezvous" name ("a meeting at an agreed time and place") refers to the fact that send() and receive() should "meet on time".
+
+           val rendezvousChannel = Channel<T>()
+
+    Conflated channel:
+
+    A new element sent to the conflated channel will overwrite the previously sent element,
+    so the receiver will always get only the latest element. The send() call never suspends.
+
+           val conflatedChannel = Channel<T>(CONFLATED)
+
+
+    By default, a "Rendezvous" channel is created.
  */
