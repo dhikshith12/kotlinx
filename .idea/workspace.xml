@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="232d0f7d-38ae-4608-a14a-afe8b720767e" name="Changes" comment="composingSuspendingFuncs">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/flows.kt" afterDir="false" />
+    <list default="true" id="232d0f7d-38ae-4608-a14a-afe8b720767e" name="Changes" comment="composingSuspendingFuncs,flows">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/flows.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/flows.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660080426895</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="composingSuspendingFuncs,flows">
+      <created>1660117122436</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660117122436</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +159,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="composingSuspendingFuncs" />
-    <option name="LAST_COMMIT_MESSAGE" value="composingSuspendingFuncs" />
+    <MESSAGE value="composingSuspendingFuncs,flows" />
+    <option name="LAST_COMMIT_MESSAGE" value="composingSuspendingFuncs,flows" />
   </component>
 </project>

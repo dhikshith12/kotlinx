@@ -27,10 +27,24 @@ fun main() = runBlocking<Unit>{
 
     val numsSlow = (1..3).asFlow().onEach { delay(300L) }
     val strsSlow = flowOf("one","two","three").onEach { delay(400) }
-    val startTime = System.currentTimeMillis()
+    var startTime = System.currentTimeMillis()
     numsSlow.combine(strsSlow){a,b->"$a -> $b"}
         .collect{
             println("$it at ${System.currentTimeMillis()-startTime}")
+        }
+    startTime = System.currentTimeMillis()
+    //has same effect as .map{transform(T)}.flatConcat{} where map transforms a Flow into Flow<Flow<T>> and flacConcat flattens flow of flows.
+    nums.onEach { delay(100L) }
+        .flatMapConcat { requestFlow(it) }
+        .collect{
+            println("$it at ${System.currentTimeMillis()-startTime} ms from start")
+        }
+    println("===============flatMapMerge=============")
+    startTime = System.currentTimeMillis()
+    nums.onEach { delay(100) }
+        .flatMapMerge { requestFlow(it) }
+        .collect{
+            println("$it at ${System.currentTimeMillis()-startTime} ms from start")
         }
 }
 
@@ -114,5 +128,25 @@ fun simpleSlow():Flow<Int> = flow{
 /* ===============Zipping=====================
     takes two flows and zips thems,
     items in the new flow after zipping are as slow as the slower flow between both flows.
+
+    combine can be helpful when computing a value where both flows represents updating values
+    and by combining them if at least one flow emits new value it computes new result by combining
  */
 
+/*  =============Flattening Flows================
+    Flows represent asynchronously received sequences of values, so it is quite easy to get in a
+    situation where each value triggers a request for another sequence of values. For example, We can
+    have the following function that returns a flow of two strings 500 ms apart:
+*/
+fun requestFlow(i: Int):Flow<String> = flow{
+    emit("$i: First")
+    delay(200)
+    emit("$i: Second")
+}
+/*
+    Now if we have a flow of three integers and call requestFlow for each of them like this:
+        (1..3).asFlow().map{ requestFlow(it) }
+    Then we end up with a flow of Flows(Flow<Flow<String>>) that needs to be flattened into a single flow
+    for further processing. Collections and sequences have flatten and flatMap modes of flattening, as such,
+    there is a family of flattening operators on flows.
+ */
