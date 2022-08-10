@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="232d0f7d-38ae-4608-a14a-afe8b720767e" name="Changes" comment="composingSuspendingFuncs">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/dispatchersAndThreads.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/flows.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +47,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Kotlin.DispatchersAndThreadsKt">
+  <component name="RunManager" selected="Kotlin.FlowsKt">
     <configuration name="CancellationandtimeoutsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CancellationandtimeoutsKt" />
       <module name="consoleApp" />
@@ -71,6 +71,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FlowsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="flows.FlowsKt" />
+      <module name="consoleApp" />
+      <shortenClasspath name="NONE" />
+      <option name="VM_PARAMETERS" value="-Dkotlinx.coroutines.debug" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainKt" />
       <module name="consoleApp" />
@@ -84,10 +93,12 @@
       <item itemvalue="Kotlin.MainKt" />
       <item itemvalue="Kotlin.ComposingSuspendingFuncsKt" />
       <item itemvalue="Kotlin.DispatchersAndThreadsKt" />
+      <item itemvalue="Kotlin.FlowsKt" />
       <item itemvalue="Kotlin.CancellationandtimeoutsKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.FlowsKt" />
         <item itemvalue="Kotlin.DispatchersAndThreadsKt" />
         <item itemvalue="Kotlin.ComposingSuspendingFuncsKt" />
         <item itemvalue="Kotlin.CancellationandtimeoutsKt" />
@@ -117,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660076989522</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="composingSuspendingFuncs">
+      <created>1660080426895</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660080426895</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
